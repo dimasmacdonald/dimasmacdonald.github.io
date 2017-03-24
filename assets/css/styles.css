@@ -1,0 +1,418 @@
+/*
+
+	Dimas MacDonald | Portfolio Website
+	CSS
+
+*/
+
+/* Extra small devices (portrait phones, less than 544px) */
+/* No media query since this is the default in Bootstrap */
+
+
+/* GENERAL */
+* {
+	border-radius: 0 !important;
+}
+/* 
+body {
+	background-color: #e74c3c;
+}
+ */
+ 
+button:focus, button.btn:focus {
+	outline:0;
+}
+
+.col-no-padding {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+/* CSS3 Plugins */
+
+/*!
+ * Hover.css (http://ianlunn.github.io/Hover/)
+ * Version: 2.1.0
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+
+ * Hover.css Copyright Ian Lunn 2014. Generated with Sass.
+ */
+ 
+ .hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, .brand {
+	font-family: 'Open-Sans', sans-serif;
+	font-weight: 700;
+}
+
+nav a.nav-link-fix, small {
+	font-family: 'Open-Sans', sans-serif !important;
+	font-weight: 400;
+}
+
+p, a, figcaption {
+	font-family: 'Raleway', sans-serif;
+}
+
+a {
+	color: #2496e2;
+}
+
+a:hover {
+	color: #1b72ad;
+}
+
+small {
+	color: #a5a5a5;
+}
+
+small a {
+	color: #777777;
+}
+
+#about main p {
+	font-size: 20px;
+	max-width: 750px;
+	display: block;
+ 	margin: 0 auto 2.0em;
+ 	padding: 0 24px 1.0em;
+ }
+ 
+.project main p {
+ 	font-size: 20px;
+	max-width: 750px;
+	display: block;
+ 	margin: 0 auto 0.5em;
+ 	padding: 0 24px 1.0em;
+ }
+
+/* ------------------------------------------------------------------------------------ */
+
+/* NAV */
+
+nav.navbar {
+	padding: 0 !important;
+}
+
+.project nav a.active:hover {
+	text-decoration: underline;
+}
+
+nav a {
+	padding: 0 1.0em;
+}
+
+nav a.active {
+	background-color: #2980b9;
+}
+
+.project nav a.active {
+	background-color: #d35400;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+/* HEADER */
+
+header {
+}
+
+header .container {
+	padding: 0;
+}
+
+h1 {
+	font-size: 70px;
+	text-align: center;
+	color: #fff;
+	background-color: #3498db;
+	display: block;
+	margin: 0 auto 0.5em;
+	padding: .5em;
+}
+
+#home h1 {
+	padding: 50px;
+}
+
+.project h1 {
+	background-color: #e67e22;
+}
+
+h2 {
+	text-align: center;
+}
+
+h2.year {
+	margin-bottom: .5em;
+}
+
+/* Visually hidden from http://stackoverflow.com/questions/32265420/visually-remove-h1-element-whilst-preserving-screen-reader-accessibility-and-a*/
+#home h1.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#home h1.visuallyhidden.focusable:active,
+#home h1.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+/* MAIN */
+
+main i.fa {
+	text-align: center;
+	display: block;
+}
+
+#home main p {
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: .5em;
+}
+
+#home main p.name, h2.year {
+	font-size:50px; 
+	border-bottom: 4px dashed #c1c1c1;
+}
+
+#home main p .important {
+	font-family: 'Open-Sans', sans-serif;
+	font-weight: 700;
+}
+
+#home main p a:hover {
+	text-decoration: none;
+	padding-bottom: 3px;
+	border-bottom: 4px solid #1b72ad;
+}
+
+#home main p.last{
+	border-bottom: 4px dashed #c1c1c1;
+}
+
+#home .contact-info {
+	margin-top: 4.0em;
+	max-width: 700px;
+}
+
+#home .contact-links {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+#home .contact-links a:hover {
+	text-decoration: none;
+}
+
+/* ----------------------------------- */
+
+#about main {
+	text-align: center;
+}
+
+#about main i {
+	margin-bottom: .1em;
+}
+
+#about main p {
+ 	border-bottom: 1px dashed #a5a5a5;
+}
+
+#about main .profile-container {
+	margin-bottom: 2.0em;
+}
+
+#about main #profile{
+	display: block;
+	margin: 0 auto;
+	max-width: 960px;
+	height: 300px;
+	width: 100%;
+}
+
+#about main .about-icon {
+	height: 80px;
+	width: auto;
+	display: block;
+	margin: 0 auto 1.0em;
+}
+
+/* ----------------------------------- */
+
+#projects .projects-wrapper {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Text overlay text on hover from http://jsbin.com/zezaminavi/1/edit?html,css,js,output */
+#projects .project-item {
+	max-width: 500px;
+}
+
+#projects figure {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#projects img {
+	display: block;
+	vertical-align: top;
+	transition: .2s;
+}
+
+
+
+#projects figure:hover {
+	cursor: pointer;
+}
+
+#projects figure:hover img {
+	transform: scale(1.05);
+}
+
+#projects figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(230, 126, 34, 1);
+	color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	padding: 2em;
+	transition: .2s;
+	transform: translateY(100%);
+}
+
+#projects figure:hover figcaption {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ----------------------------------- */
+
+.project .screens {
+	border: 1px solid #c1c1c1;
+}
+
+.project figure {
+	padding: 25px;
+	border-bottom: 1px dashed #c1c1c1;
+	max-height: 800px;
+	max-width: 700px;
+	display: block;
+	margin: 0 auto;
+}
+
+.project figure img {
+	
+	
+}
+
+.project figure.responsive-screen {
+	max-width: 400px;
+	display: block;
+	
+}
+
+.project figcaption {
+	color: #fff;
+	text-align: center;
+	max-width: 700px;
+	background-color: #d35400;
+	display: block;
+	margin: 0 auto;
+	padding:.3em 0;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+
+/* FOOTER */
+
+
+
+/* ------------------------------------------------------------------------------------ */
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) { 
+
+	
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	#about main #profile{
+		display: block;
+		margin: 0 auto 1.0em;
+	}
+	
+	#home main p {
+		font-size: 40px;
+	}
+	
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	#home h1 {
+		padding: 100px;
+	}
+	
+	#about main .profile-container {
+		margin-bottom: 3.0em;
+	}
+	
+	#about main #profile{
+		height: 500px;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	#home h1 {
+		padding: 150px;
+	}
+}
