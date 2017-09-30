@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<!-- 
+		I399: Web Development
+		Project 5 - Menu
+		Dimas MacDonald
+	-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>Donald's Burgers</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+		<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+		
+		<!-- Stylesheets -->
+		<link href="assets/css/styles.css" rel="stylesheet" type="text/css" media="all">
+		<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,700|Raleway:400i,700" rel="stylesheet">
+		<!--[if lt IE 9]>
+    		<script src="assets/components/html5shiv/html5shiv.min.js"></script>
+		<![endif]-->
+		
+	</head>
+
+	<body>
+		<nav>
+			<ul>
+				<li><a id="mini-logo" href="#">D<span style="font-weight:700;">B</span></a></li>
+				<li><a href="#" class="current">Menu</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#" id="reserve">Reserve</a></li>
+				<li class="icon"><a href="javascript:void(0);">&#9776;</a></li>
+			</ul>
+		</nav>
+		<img id="logo" src="assets/images/logo.png" alt="logo">
+		
+		<header>
+			<h1 class="visuallyhidden">Dimas' Burgers Menu</h1>
+			<h1 class="title">Menu</h1>
+			<section id="banner"></section>
+		</header>
+		<div id="wrapper">
+			<main>
+				<article id="menu">
+						<h2>Burgers</h2>
+						<p><span style="white-space: nowrap;">Served nice and hot from the grill</span></p>
+						<div class="item-wrapper">
+							<h3>Donald Burger</h3>
+							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<p class="price">$6</p>
+							<h3>Lorem Ipsum Burger</h3>
+							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<p class="price">$7.50</p>
+							<h3>Black Bean Burger</h3>
+							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<p class="price">$7</p>
+							<h3>Small Donald Burger</h3>
+							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<p class="price">$3</p>
+							<h3>Small Lorem Ipsum Burger</h3>
+							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<p class="price">$4</p>
+							<h3>Small Black Bean Burger</h3>
+							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<p class="price">$4</p>
+						</div>
+				</article>
+				<aside>
+					<h2>Sides</h2>
+					<p><span style="white-space: nowrap;">Because you need more than a burger</span></p>
+					<div class="item-wrapper">
+						<h3>French Fries</h3>
+						<p class="desc"></p>
+						<p class="price">$3</p>
+						<h3>Onion Rings</h3>
+						<p class="desc"></p>
+						<p class="price">$3</p>
+						<h3>Peanuts</h3>
+						<p class="desc"></p>
+						<p class="price">$2</p>
+					</div>
+
+					<h2>Drinks</h2>
+					<p>Need a refresher?</p>
+					<div class="item-wrapper">
+						<h3>Bottled Water</h3>
+						<p class="price">$2</p>
+						<h3>Soft Drink</h3>
+						<p class="price"><span style="white-space: nowrap;"><strong>S:</strong> $1 | <strong>M:</strong> $2 | <strong>L:</strong> $3</span></p>
+						<h3>Milkshake</h3>
+						<p class="desc"><strong>Flavors:</strong> Vanilla | Strawberry | Chocolate</p>
+						<p class="price"><span style="white-space: nowrap;"><strong>S:</strong> $2 | <strong>M:</strong> $3 | <strong>L:</strong> $4</span></p>
+					</div>
+				</aside>
+			</main>
+		</div>
+		<footer>
+			<p>Everyday 11AM-9PM</p>
+			<p>884 S. Rosewood Lane, Bloomington, IN 20707</p>
+			<p><a href="mailto:info@dimasburgers.com">info@donaldsburger.com</a></p>
+		</footer>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			/* Exercising with jQuery */
+			/* I decided to try my hand at manipulating the website using jQuery */
+			$(document).ready(function(){
+					$('li.icon').click(function() {
+						if ($('nav > ul').hasClass('responsive'))
+							$('nav > ul').removeClass('responsive');
+						else
+							$('nav > ul').addClass('responsive');
+					});
+					//Scroll fade from: https://coderwall.com/p/rxfefg/fade-an-element-relative-to-scroll-in-one-line
+					$(window).scroll(function(){
+						$('#logo').css({'opacity':( 150-$(window).scrollTop() )/150});
+					});
+				}
+			);
+		</script>
+	</body>
+</html>

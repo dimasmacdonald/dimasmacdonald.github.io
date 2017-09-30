@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<!-- 
+		I399: Web Development
+		Project 5 - Contact
+		Dimas MacDonald
+	-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>Donald's Burgers | Contact</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+		<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+		
+		<!-- Stylesheets -->
+		<link href="assets/css/styles.css" rel="stylesheet" type="text/css" media="all">
+		<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,700|Raleway:400i,700" rel="stylesheet">
+		<!--[if lt IE 9]>
+    		<script src="assets/components/html5shiv/html5shiv.min.js"></script>
+		<![endif]-->
+	</head>
+	<body id="contact">
+		<nav>
+			<ul>
+				<!-- <li><img id="logo" src="assets/images/mini-logo.png" alt="logo"></li> -->
+				<li><a id="mini-logo" href="#">D<span style="font-weight:700;">B</span></a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="#" class="current">Contact</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#" id="reserve">Reserve</a></li>
+				<li class="icon"><a href="javascript:void(0);">&#9776;</a></li>
+			</ul>
+		</nav>
+		<img id="logo" src="assets/images/logo.png" alt="logo">
+		<header>
+			<h1 class="visuallyhidden">Dimas' Burgers Contact</h1>
+			<h1 class="title">Contact</h1>
+			<section id="banner"></section>
+		</header>
+		<main>
+			<article>
+				<h2></h2>
+				<p class="desc">If you would like more information about Donald's Burgers, then feel free to
+				email or call us!</p>
+				<div class="contact-wrapper">
+					<h3>Hours</h3>
+					<p><em>Everyday</em></p>
+					<p style="font-size: 20px;">11AM-9PM</p>
+				</div>
+				<div class="contact-wrapper">
+				<h3>Address</h3>
+					<address>884 S. Rosewood Lane, Bloomington, IN 20707</address> <!-- Address is made up and location on map is random -->
+					<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d6186.303839898841!2d-86.58108810421213!3d39.171266917715236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x886c675ec8183207%3A0x39c920831a1065fb!2s401+North+Gates+Drive%2C+Bloomington%2C+IN+47404!3m2!1d39.171267!2d-86.5767!5e0!3m2!1sen!2sus!4v1478187986813" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="contact-wrapper">
+					<h3>Email</h3>
+					<a class="email" href="mailto:info@dimasburgers.com">info@donaldsburgers.com</a>
+				</div>
+			</article>
+		</main>
+		<footer>
+			<p>Everyday 11AM-9PM</p>
+			<p>884 S. Rosewood Lane, Bloomington, IN 20707</p>
+			<p><a href="mailto:info@dimasburgers.com">info@donaldsburgers.com</a></p>
+		</footer>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			/* Exercising with jQuery */
+			/* I decided to try my hand at manipulating the website using jQuery */
+			$(document).ready(function(){
+					$('li.icon').click(function() {
+						if ($('nav > ul').hasClass('responsive'))
+							$('nav > ul').removeClass('responsive');
+						else
+							$('nav > ul').addClass('responsive');
+					});
+					//Scroll fade from: https://coderwall.com/p/rxfefg/fade-an-element-relative-to-scroll-in-one-line
+					$(window).scroll(function(){
+						$('#logo').css({'opacity':( 150-$(window).scrollTop() )/150});
+					});
+				}
+			);
+		</script>
+	</body>
+</html>

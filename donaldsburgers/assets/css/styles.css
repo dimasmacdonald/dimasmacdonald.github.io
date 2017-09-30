@@ -1,0 +1,391 @@
+/* 
+	I399: Web Development
+	Project 5 - CSS
+	Dimas MacDonald
+*/
+
+/* 
+	Color Scheme:
+	Bright Red - #FF3021
+	Dark Gray - #333333
+	Off-white - #EDEBEB
+
+*/
+
+/* apply a natural box layout model to all elements */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*--------------------------------------------------------------------*/
+/* GENERAL */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color: #333333;
+	overflow-x:hidden;
+}
+#wrapper {
+	display: block;
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow-x:hidden;
+}
+
+/*--------------------------------------------------------------------*/
+/* TYPOGRAPHY */
+
+h1, h2, h3, h4, nav{
+	font-family: 'Raleway', 'sans-serif';
+	text-transform: uppercase;
+}
+
+p {
+	font-family: 'Cabin', 'sans-serif';
+}
+
+/*--------------------------------------------------------------------*/
+/* NAVIGATION */
+/* Used Project 5 practice to help with responsive fixed nav bar */
+nav {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+	box-shadow: 0px 2px 20px #000000;
+	font-weight: 700;
+	
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	z-index: 15;
+}
+
+nav ul li {
+	float: left;
+	height: 48px;
+}
+
+nav ul a#mini-logo{
+	background-color: #FF3021; !important
+	transition: width 1s;
+	transition-timing-function: ease;
+}
+
+nav ul li a {
+	color: #f2f2f2;
+	font-size: 17px;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 16px;
+	display: inline-block;
+	transition: all 0.3s;
+	
+}
+
+nav ul li a:hover {
+	background-color: #555;
+}
+
+nav ul li #mini-logo:hover{
+	background-color: #ff7066;
+}
+
+nav ul li.icon {
+	display: none;
+}
+
+#logo {
+	position: fixed;
+	z-index: -1;
+	top: 48px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding: 30px;
+	border-radius: 0 0 20px 20px;
+	background-color: #FF3021;
+}
+
+/*--------------------------------------------------------------------*/
+/* HEADER */
+
+/* Visually hidden from https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/ */
+/* Background image from https://unsplash.com/search/restaurant?photo=5PFQXDxOHBU */
+/* Full page background image from https://css-tricks.com/perfect-full-page-background-image/ */
+
+h1.visuallyhidden{
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.title {
+	position: absolute;
+	bottom: 0;
+	z-index: -98;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #fff;
+	max-width: 500px;
+	font-size: 60px;
+	font-weight: 700;
+	border-radius: 15px 15px 0 0;
+}
+
+#banner {
+	background: url(../images/bkg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	z-index: -99;
+}
+
+#contact #banner {
+	background: url(../images/contact-bkg.jpg) no-repeat center center fixed; !important
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	z-index: -99;
+}
+
+
+/*--------------------------------------------------------------------*/
+/* MAIN */
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: center;
+	align-items: flex-start;
+	background-color: #EDEBEB;
+	transition: all 1s;
+}
+
+#contact main {
+	left:0;
+	right:0;
+	margin: 0 auto;
+}
+
+main #entrees {
+	max-width: 700px;
+	background-color: #FF3021;
+}
+
+main {
+	padding: 0 30px;
+	font-size:30px;
+}
+
+#contact main a {
+	color: black;
+	text-decoration: none;
+}
+
+#contact main a:hover {
+	color: #333333;
+	text-decoration: underline;
+}
+
+main h2 {
+	font-size: 60px;
+}
+
+#contact main h3 {
+	font-size: 40px;
+}
+
+main .item-wrapper {
+	background-color: white;
+	padding: 15px 25px;
+}
+
+main article {
+	flex: 1 0 300px;
+	padding: 20px 30px;
+	transition: all 1s;
+}
+
+#contact main article {
+	display: inline-block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+main article h2 {
+	padding: 0;
+	text-align: center;
+}
+
+main article h3, main aside h3 {
+	margin-top: .3em;
+}
+
+main article p, main aside p {
+	width: 100%;
+	margin: 0; !important
+}
+
+main article h2, main aside h2 {
+	padding-bottom: .2em;
+}
+
+main article h2+p, main aside h2+p {
+	font-style: italic;
+	font-weight: 400;
+	font-size: 20px;
+	padding-bottom: .5em;
+	border-bottom: 3px solid #FF3021;
+}
+
+#contact main article h2+p {
+	max-width: 500px;
+	margin: 0 auto;
+	border-bottom: none;
+}
+
+#contact main .contact-wrapper {
+	background-color: white;
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto 25px;
+	padding: 5px 15px 25px 15px;
+	border-top: 3px solid #FF3021;
+}
+
+main .price {
+	font-style: italic;
+	margin-bottom: 1.0em;
+}
+
+main aside {
+	flex: 1 0 0;
+	padding: 20px 30px;
+}
+
+main aside .item-wrapper {
+	margin-bottom: 1.0em;
+}
+
+main aside p.desc {
+	white-space: nowrap;
+	font-size:20px;
+}
+
+iframe {
+	width: 80%;
+	background-color: white;
+	margin-top: .3em;
+	border: 
+}
+
+#contact main a.email {
+	transition: all .5s;
+}
+
+
+/*--------------------------------------------------------------------*/
+/* @media */ 
+@media screen and (max-width:680px) {
+	main, main article {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	.item-wrapper, .contactWrapper {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+	
+	#contact main a.email {
+		font-size: 20px;
+		transition: all .5s;
+	}
+	
+	nav ul li:not(:first-child) {display: none;}
+	
+	nav ul li.icon {
+		float: right;
+		display: inline-block;
+	}
+	nav ul.responsive {position: relative;}
+	
+	nav ul.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}	
+	nav ul.responsive li {
+		float: none;
+		display: inline;
+	}
+	nav ul.responsive li a {
+		display: block;
+		text-align: left;
+	}
+	nav ul.responsive li.icon a:hover {
+		color: #333333;
+		background-color: transparent;
+		transition: 0.3s;
+	}
+}
+
+/* FOOTER */
+
+footer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+	color: #EDEBEB;
+	font-size: 20px;
+}
+
+footer p {
+	flex: 0 0 1;
+	padding: 15px 25px;
+	
+}
+footer a {
+	color: #EDEBEB;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
